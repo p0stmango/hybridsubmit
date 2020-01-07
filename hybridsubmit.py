@@ -11,10 +11,10 @@ json_data = r.json()
 print("File SHA256: " + json_data['sha256'])
 print("Scan ID: " + json_data['id'])
 for current_scanner in json_data['scanners']:
-        print('Scanner Name: ' + current_scanner['name'])
-        print('\tDetection Percentage: ' + str(current_scanner['percent']))
-        print('\tDetermined Status: ' + current_scanner['status'])
-        print('\tScanned by ' + str(current_scanner['total']) + " agents")
+    print('Scanner Name: ' + current_scanner['name'])
+    print('\tDetection Percentage: ' + str(current_scanner['percent']))
+    print('\tDetermined Status: ' + current_scanner['status'])
+    print('\tScanned by ' + str(current_scanner['total']) + " agents")
 if json_data['whitelist'][0]['value']:
     print("File is whitelisted")
 else:
