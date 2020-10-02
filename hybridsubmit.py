@@ -3,6 +3,10 @@ import sys, requests, json, argparse
 
 apikey = ""
 
+if apikey == "":
+    print("No API Key has been provided, please edit this script with the applicable API key")
+    sys.exit()
+
 parser = argparse.ArgumentParser(description='Scan files using the Hybrid Analysis Cloud Sandbox')
 parser.add_argument('file', metavar = 'FILE-TO-UPLOAD', type=str)
 parser.add_argument('-f', "--full", choices=['windows','linux'],help="Run file through full emulation in cloud sandbox on the provided operating system (Windows/Linux)")
